@@ -3,13 +3,34 @@
 <head>
 	<meta charset="utf-8" />
 	<title>Document</title>
+    <script src="http://localhost/cdn/jquery.min.js"></script>
+    <script src="/home/namnv/Desktop/jquery-modal-dialog/js/jquery-modal-dialog.js"></script>
 	<link rel="stylesheet" href="css/modal_dialog.css" />
+    <script>
+        $(function() {
+            $("#fb").modalDialog({
+                type: 'facebook'
+            });
+            $("#metro").modalDialog({
+                type: 'metro'
+            });
+        })
+    </script>
+    <style>
+        span {
+            display: inline-block;
+            padding: 5px;
+            color: #F00;
+            cursor: pointer;
+        }
+        span:hover {
+            text-decoration: underline;
+            color: #00F;
+        }
+    </style>
 </head>
 <body>
-	<div class="modal-dialog-overlay">
-		<div class="dialog-content-wrapper metro-dialog">
-			aaaa
-		</div>
-	</div>
+	<span id="fb">Click me</span>
+    <span id="metro">Metro</span>
 </body>
 </html>
